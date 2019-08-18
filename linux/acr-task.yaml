@@ -1,7 +1,7 @@
 version: v1.0.0
 steps:
 # Build target image
-- build: -t {{.Run.Registry}}/azpipelineagent:{{.Run.Date}} -f Dockerfile .
+- build: -t {{.Run.Registry}}/azpipelineagent:{{.Run.Date}} -f linux/Dockerfile ./linux
 # Push image
 - push:
   - {{.Run.Registry}}/azpipelineagent:{{.Run.Date}}
